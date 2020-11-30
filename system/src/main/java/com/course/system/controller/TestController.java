@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
  *  * @copyright 2020 www.XXXXX.com
  *  
  */
+
 @RestController
+//@RequestMapping("system")
 public class TestController {
-    @RequestMapping("test")
+    @RequestMapping("/test")
     public String test(){
         return "success";
     }
