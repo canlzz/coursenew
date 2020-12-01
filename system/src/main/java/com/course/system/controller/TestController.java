@@ -36,4 +36,12 @@ public class TestController {
     public List<Test> test1() {
         return testSevice.list();
     }
+    @RequestMapping("/test2")
+    public List<Test> test2() {
+        return testSevice.list();
+    }
+    @RequestMapping("/test3")
+    public List<Test> test3() {
+        return testSevice.list();
+    }
 }
