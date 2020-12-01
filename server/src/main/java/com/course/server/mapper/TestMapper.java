@@ -1,22 +1,31 @@
 package com.course.server.mapper;
 
 import com.course.server.domain.Test;
+import com.course.server.domain.TestExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-/**
- *  
- *  * @projectName course
- *  * @title     TestMapper   
- *  * @package    com.course.system.mapper  
- *  * @description      
- *  * @author juzizhou     
- *  * @date   2020/12/1 6:23  
- *  * @version V1.0.0
- *  * @copyright 2020 www.XXXXX.com
- *  
- */
 public interface TestMapper {
+    long countByExample(TestExample example);
 
-    public List<Test> list();
+    int deleteByExample(TestExample example);
+
+    int deleteByPrimaryKey(String id);
+
+    int insert(Test record);
+
+    int insertSelective(Test record);
+
+    List<Test> selectByExample(TestExample example);
+
+    Test selectByPrimaryKey(String id);
+
+    int updateByExampleSelective(@Param("record") Test record, @Param("example") TestExample example);
+
+    int updateByExample(@Param("record") Test record, @Param("example") TestExample example);
+
+    int updateByPrimaryKeySelective(Test record);
+
+    int updateByPrimaryKey(Test record);
 }

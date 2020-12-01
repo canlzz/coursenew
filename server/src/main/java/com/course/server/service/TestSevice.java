@@ -25,7 +25,7 @@ public class TestSevice {
     private TestMapper testMapper;
 
     public List<Test> list() {
-        return testMapper.list();
+        return  null/*testMapper.list()*/;
     }
 
 
