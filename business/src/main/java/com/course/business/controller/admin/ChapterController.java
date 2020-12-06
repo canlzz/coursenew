@@ -1,6 +1,6 @@
-package com.course.business.controller;
+package com.course.business.controller.admin;
 
-import com.course.server.domain.Chapter;
+import com.course.server.dto.ChapterDto;
 import com.course.server.service.ChapterSevice;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,26 +22,14 @@ import java.util.List;
  */
 
 @RestController
-//@RequestMapping("system")
+@RequestMapping("admin")
 public class ChapterController {
     @Resource
     private ChapterSevice chapterSevice;
 
     @RequestMapping("/chapter")
-    public String chapter() {
-        return "success";
+    public List<ChapterDto> chapter() {
+        return chapterSevice.list();
     }
 
-    @RequestMapping("/chapter1")
-    public List<Chapter> chapter1() {
-        return chapterSevice.list();
-    }
-    @RequestMapping("/chapter2")
-    public List<Chapter> chapter2() {
-        return chapterSevice.list();
-    }
-    @RequestMapping("/chapter3")
-    public List<Chapter> chapter3() {
-        return chapterSevice.list();
-    }
 }
